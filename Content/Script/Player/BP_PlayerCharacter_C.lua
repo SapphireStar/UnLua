@@ -7,6 +7,7 @@ local Lerp = UE.UKismetMathLibrary.Lerp
 --end
 
 function M:OnZoomInOutUpdate(Alpha)
+	print(Alpha)
 	local FOV = Lerp(self.DefaultFOV, self.Weapon.AimingFOV, Alpha)
 	self.Camera:SetFieldOfView(FOV)
 end
