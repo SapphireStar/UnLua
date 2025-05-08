@@ -12,6 +12,7 @@ function M:ReceiveBeginPlay()
 end
 
 function M:OnComponentHit_Sphere(HitComponent, OtherActor, OtherComp, NormalImpulse, Hit)
+	print("Projectile hit")
 	local BP_CharacterBase = UE.UClass.Load("/Game/Core/Blueprints/BP_CharacterBase.BP_CharacterBase_C")
 	local Character = OtherActor:Cast(BP_CharacterBase)
 	if Character then

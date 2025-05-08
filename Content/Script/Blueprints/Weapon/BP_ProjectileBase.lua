@@ -23,8 +23,8 @@ function M:OnComponentHit_Sphere(HitComponent, OtherActor, OtherComp, NormalImpu
 	local Character = OtherActor:Cast(BP_CharacterBase)
 	if Character then
 		Character.BoneName = Hit.BoneName;
-		-- local Controller = self.Instigator:GetController()
-		-- UE.UGameplayStatics.ApplyDamage(Character, self.Damage, Controller, self.Instigator, self.DamageType)
+		local Controller = self.Instigator:GetController()
+		UE.UGameplayStatics.ApplyDamage(Character, self.Damage, Controller, self.Instigator, self.DamageType)
 	end
 	self:K2_DestroyActor()
 end

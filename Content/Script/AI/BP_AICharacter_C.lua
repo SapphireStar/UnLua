@@ -39,4 +39,10 @@ function M:OnComponentBeginOverlap_Sphere(OverlappedComponent, OtherActor, Other
 	end
 end
 
+function M:Died()
+	self.Super.Died(self)
+	self.Sphere.SetCollisionEnabled(UE.ECollisionEnabled.NoCollision)
+end
+
+
 return M
